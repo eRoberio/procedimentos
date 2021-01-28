@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:pdc/controller/steppController.dart';
 
 import 'componets/stepp.dart';
+import 'controller/insertcontroller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +12,7 @@ void main() async {
 
 //Injeção de Dependencias
 void setupLocators() {
-  GetIt.I.registerSingleton<Stepp>(Stepp());
+  GetIt.I.registerSingleton<Inser>(Inser());
 }
 
 class MyApp extends StatelessWidget {
