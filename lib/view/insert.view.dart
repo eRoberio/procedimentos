@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:pdc/componets/stepp.dart';
+import 'package:pdc/controller/insertcontroller.dart';
 
 class Insert extends StatefulWidget {
   @override
@@ -7,6 +9,8 @@ class Insert extends StatefulWidget {
 }
 
 class _InsertState extends State<Insert> {
+final controller = GetIt.I<Inser>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,3 +58,4 @@ class _InsertState extends State<Insert> {
     );
   }
 }
+ */

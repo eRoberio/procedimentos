@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:pdc/view/cadastro.view.dart';
 
-import 'componets/stepp.dart';
 import 'controller/insertcontroller.dart';
 
 void main() async {
@@ -19,10 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
         ),
-        home: StepperDemo());
+        home: CadastroSteep());
   }
 }

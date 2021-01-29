@@ -59,10 +59,14 @@ class _StepperDemoState extends State<StepperDemo> {
   }
 
   continued() {
-    _currentStep < 2 ? setState(() => _currentStep += 1) : null;
+    _currentStep < 2 ? setState(() => _currentStep += 1): 2;
   }
 
   cancel() {
-    _currentStep > 0 ? setState(() => _currentStep -= 1) : null;
+    _currentStep > 0 ? setState(() => _currentStep -= 1) : 2;
   }
+
+
+
+  
 }
