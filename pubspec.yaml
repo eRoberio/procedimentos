@@ -32,7 +32,6 @@ dependencies:
   mobx: ^1.2.1
   flutter_mobx: ^1.1.0
   cloud_firestore: ^0.13.1
-  flutter_localizations:
   intl: ^0.16.0
 
 
