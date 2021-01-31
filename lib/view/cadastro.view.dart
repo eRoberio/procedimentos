@@ -27,23 +27,12 @@ class StepperBody extends StatefulWidget {
 class _StepperBodyState extends State<StepperBody> {
   DateTime _dateInfo = DateTime.now();
   int currStep = 0;
-  static var _focusNode = new FocusNode();
   GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
   static MyData data = new MyData();
 
   @override
   void initState() {
     super.initState();
-    _focusNode.addListener(() {
-      setState(() {});
-      print('Has focus: $_focusNode.hasFocus');
-    });
-  }
-
-  @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
   }
 
   List<Step> steps = [
@@ -73,7 +62,6 @@ class _StepperBodyState extends State<StepperBody> {
             ),
             TextFormField(
               initialValue: data.feijao,
-              focusNode: _focusNode,
               keyboardType: TextInputType.text,
               autocorrect: false,
               onSaved: (String value) {
@@ -99,7 +87,6 @@ class _StepperBodyState extends State<StepperBody> {
           children: [
             TextFormField(
               initialValue: data.frango_dia,
-              focusNode: _focusNode,
               keyboardType: TextInputType.text,
               autocorrect: false,
               onSaved: (String value) {
@@ -118,7 +105,6 @@ class _StepperBodyState extends State<StepperBody> {
             ),
             TextFormField(
               initialValue: data.feijao_dia,
-              focusNode: _focusNode,
               keyboardType: TextInputType.text,
               autocorrect: false,
               onSaved: (String value) {
@@ -144,7 +130,6 @@ class _StepperBodyState extends State<StepperBody> {
           children: [
             TextFormField(
               initialValue: data.frango_rec,
-              focusNode: _focusNode,
               keyboardType: TextInputType.text,
               autocorrect: false,
               onSaved: (String value) {
@@ -163,7 +148,6 @@ class _StepperBodyState extends State<StepperBody> {
             ),
             TextFormField(
               initialValue: data.feijao_rec,
-              focusNode: _focusNode,
               keyboardType: TextInputType.text,
               autocorrect: false,
               onSaved: (String value) {
@@ -188,24 +172,24 @@ class _StepperBodyState extends State<StepperBody> {
         content: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Table(border: TableBorder.all(color: Colors.red),
+            Table(
+              border: TableBorder.all(color: Colors.red),
               children: [
                 TableRow(children: [
                   Text(' DESCRIÇÃO',
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
-            
                   Text(' QTD',
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
                   Text(' VALOR',
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
-                ]),TableRow(children: [
+                ]),
+                TableRow(children: [
                   Text(' COENTRO + CEBOLA + FARINHA',
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
-                
                   Text('  ',
                       style:
                           TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
@@ -267,7 +251,7 @@ class _StepperBodyState extends State<StepperBody> {
                     SizedBox(
                       height: 10,
                     ),
-                    new Text("Data: ${_dateInfo}"),
+                    new Text("Data: $_dateInfo"),
                   ],
                 ),
               ),
